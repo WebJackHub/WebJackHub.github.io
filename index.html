@@ -1,0 +1,14 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1 id="path"></h1>
+    <script>
+        var path = window.location.pathname.split("/")
+        document.getElementById('path').innerHTML = path[path.length - 1].split('.')[0]
+    </script>
+</body>
+
+</html>
