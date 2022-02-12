@@ -1,30 +1,19 @@
-const http = require("http")
-const fs = require("fs")
-const port = 3000
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-const server = http.createServer(function (req, res) {
-    /*
-    res.writeHead(200, { "Content-Type": "text/html" })
-    fs.readFile('index.html', function (error, data) {
-        if (error) {
-            res.writeHead(404)
-            res.write("Error: File Not Found")
-        } else {
-            res.write(data)
-        }
-        res.end()
-    })
-    */
-    res.write("Test")
-    res.end()
-})
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <h1 id="path"></h1>
+    <script>
+        document.getElementById('path').innerHTML = window.location.pathname
+    </script>
+</body>
 
-
-server.listen(port, function (error) {
-    if (error) {
-        console.log("something went wrong", error)
-    } else {
-        console.log("server is listening on port" + port)
-    }
-}) 
+</html>
